@@ -1,0 +1,29 @@
+<h1><%= @flats.count %> appartements référencés</h1>
+
+<div class="row row-cols-1 row-cols-md-3">
+  <% @flats.each do |flat| %>
+  <div class="col mb-4">
+    <div class="card" style="width: 20rem;">
+      <div class="card-body">
+        <h5 class="card-title"><%= flat.name %></h5>
+        <h6 class="card-subtitle mb-2 text-muted"><%= flat.address %></h6>
+        <div class="d-flex">
+          <div class=" d-flex">
+            <i class="material-icons mr-2">people</i>
+            <span><%= flat.number_of_guests %></span>
+          </div>
+          <div class="d-flex ml-3">
+            <i class="material-icons mr-2">euro_symbol</i>
+            <span><%= flat.price_per_night %></span>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <%= link_to 'Voir', flat_path(flat), class: "card-link" %>
+        <%= link_to 'Editer', edit_flat_path(flat), class: "card-link text-success" %>
+        <%= link_to 'Supprimer', flat_path(flat), method: :delete, data: {confirm: "Are you sur ?"} , class: "card-link text-danger" %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>

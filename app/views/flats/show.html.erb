@@ -1,0 +1,50 @@
+<div class="container margin-negative">
+  <div class="row">
+    <div class="col-8">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h1 class="card-title"><%= @flat.name %></h1>
+          <h3 class="card-subtitle mb-2 text-muted"><%= @flat.address %></h3>
+        </div>
+      </div>
+      <div class="card h-100">
+        <div class="card-body">
+          <h2 class="card-title">A propos de cet appartement</h2>
+          <p class="card-text"><%= @flat.description %></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h3 class="card-title">Réservez l'appartement</h3>
+          <input class="form-control mb-2" type="date" value="2021-01-21" id="example-date-input">
+          <input class="form-control mb-2" type="date" value="2021-01-21" id="example-date-input">
+          <input type="submit" class="btn btn-success">
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <div class="card-body">
+          <h3 class="card-title">Détails</h3>
+          <div class="d-flex">
+          <div class=" d-flex">
+            <i class="material-icons mr-2">people</i>
+            <span><%= @flat.number_of_guests %></span>
+          </div>
+          <div class="d-flex ml-3">
+            <i class="material-icons mr-2">euro_symbol</i>
+            <span><%= @flat.price_per_night %></span>
+          </div>
+        </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+
+</div>
+
+

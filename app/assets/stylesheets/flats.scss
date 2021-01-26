@@ -1,0 +1,16 @@
+// Place all the styles related to the flats controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.banner {
+  margin-top: 0 !important;
+  background-position: center;
+  background-size: cover;
+  background-image: url('https://source.unsplash.com/1600x900/?appartement');
+  background-color: #DFDFDF;
+  height: 40vh;
+}
+
+.margin-negative {
+  margin-top: -85px;
+}
